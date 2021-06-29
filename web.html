@@ -57,22 +57,22 @@ display:inline-block;
 
 function lw() {
 var i= document.getElementById("in1").value
-var xhr = new XMLHttpRequest();
-xhr.open("GEt","http://192.168.0.101/cgi-bin/lw.py?x=" + i,true)
-xhr.send();
-xhr.onload = function() {
-         var output = xhr.responseText;
+var xve = new XMLHttpRequest();
+xve.open("GET","http://192.168.43.40/cgi-bin/docker.py?x=" + i,true)
+xve.send();
+xve.onload = function() {
+         var output = xve.responseText;
 	 document.getElementById("in2").innerHTML = output;
 }
 }
 
 </script>
 
-<input id ="in1" placeholder="   Enter the docker command" />
+<input id ="in1" placeholder="   Enter docker command" />
 <pre>
 
 <img id="i1" src="docker1.png" height="200" width="350">
-<div id="in2">Output will be displayed here ...</div>
+<div id="in2">Output will be displayed here </div>
 </pre>
 
 
